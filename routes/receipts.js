@@ -11,7 +11,7 @@ const receipts = {};
 router.post('/process', (req, res) => {
     const receiptData = req.body;
     
-    if (!receiptData) return res.status(400).json({ error: 'Invalid receipt data' });
+    if (!receiptData) return res.status(400).json({ error: 'The receipt is invalid' });
     
     const receipt = new Receipt(receiptData);
     receipts[receipt.id] = receipt;
@@ -22,7 +22,7 @@ router.get('/:id/points', (req, res) => {
     const receipt = receipts[req.params.id];
 
     if (!receipt) {
-        return res.status(404).json({ error: 'Receipt not found' });
+        return res.status(404).json({ error: 'No receipt found for that id' });
     };
 
     res.json({ points: receipt.points });

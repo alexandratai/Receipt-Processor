@@ -1,10 +1,7 @@
 # Receipt-Processor
-
----
-
 ## How to Set Up the Application
 
-1. Download the `.zip` file and unzip it or run `git clone https://github.com/alexandratai/Receipt-Processor.git` in your terminal.
+1. Download the `.zip` file and unzip it or run `git clone https://github.com/alexandratai/Receipt-Processor.git` in your terminal. Once downloaded `cd` into the project.
 2. [Install Docker](https://www.docker.com/get-started) if you haven't already.
 3. Build the Docker image: 
     ```bash
