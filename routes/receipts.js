@@ -3,17 +3,17 @@ const router = express.Router();
 const Receipt = require("../models/receipt");
 
 router.get('/', (req, res) => {
-    res.send('This is receipts route');
+    res.send('This is the receipts route');
 });
 
 const receipts = {};
 
 router.post('/process', (req, res) => {
     const receiptData = req.body;
-    const receipt = new Receipt(receiptData);
-
+    
     if (!receiptData) return res.status(400).json({ error: 'Invalid receipt data' });
-
+    
+    const receipt = new Receipt(receiptData);
     receipts[receipt.id] = receipt;
     res.json({ id: receipt.id });
 });

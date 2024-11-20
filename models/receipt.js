@@ -1,7 +1,11 @@
 const { v4: uuidv4 } = require('uuid');
 
 class Receipt {
-    constructor(retailer, purchaseDate, purchaseTime, items, total) {
+    constructor({ retailer, purchaseDate, purchaseTime, items, total }) {
+        if (!retailer || !purchaseDate || !purchaseTime || !items || !total) {
+            throw new Error('Invalid receipt data');
+        }
+
         this.retailer = retailer;
         this.purchaseDate = purchaseDate;
         this.purchaseTime = purchaseTime;
@@ -15,7 +19,7 @@ class Receipt {
         return uuidv4(); // Generates a unique ID
     };
 
-    static calculatePoints() {
+    calculatePoints() {
         let points = 0;
 
         // One point for every alphanumeric character in the retailer name:
@@ -43,7 +47,7 @@ class Receipt {
         });
 
          // 6 points if the day in the purchase date is odd.
-        if (parseFloat(this.purchaseDate.split('-')[2]) % 2 !== 0) price += 6;
+        if (parseFloat(this.purchaseDate.split('-')[2]) % 2 !== 0) points += 6;
 
         // Example:
         // this.purchaseDate.split('-') -> ['2022', '01', '01']
