@@ -52,13 +52,13 @@ A simple receipt processor application that allows users to process receipts and
 5. For **Endpoint: Get Points**:
     Retrieve the points awarded for a specific receipt using its unique ID.
     
-    Run the following command with the **id** you copied from the previous call inputted where it reads `{id}`:
+    Run the following command, replacing `{id}` with the **id number** you copied from the previous call:
 
     ```bash
     curl http://localhost:3000/receipts/{id}/points
     ```  
 
-    For clarity's sake - using the previous example, you would be inputting:
+    For clarity's sake - using the previous example, your call would look something like the following:
 
     ```bash
     curl http://localhost:3000/receipts/123e4567-e89b-12d3-a456-426614174000/points
