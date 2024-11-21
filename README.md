@@ -38,7 +38,7 @@ A simple receipt processor application that allows users to process receipts and
     curl -X POST -H "Content-Type: application/json" -d @examples/mm_example.json http://localhost:3000/receipts/process
     ```
 
-    or pass your own JSON object into the command. Copy the **id** that is returned from this call.
+    or pass your own JSON object into the command. Copy the **alphanumeric id string** that is returned from this call.
 
     **Response example**:
 
@@ -52,13 +52,13 @@ A simple receipt processor application that allows users to process receipts and
 5. For **Endpoint: Get Points**:
     Retrieve the points awarded for a specific receipt using its unique ID.
     
-    Run the following command, replacing `{id}` with the **id number** you copied from the previous call:
+    Run the following command, replacing `{id}` with the **alphanumeric id string** you copied from the previous call:
 
     ```bash
     curl http://localhost:3000/receipts/{id}/points
     ```  
 
-    For clarity's sake - using the previous example, your call would look something like the following:
+    For clarity's sake - using the previous example, your call would look something like this:
 
     ```bash
     curl http://localhost:3000/receipts/123e4567-e89b-12d3-a456-426614174000/points
@@ -79,7 +79,7 @@ The examples directory contains sample JSON files for testing:
 + `target_example.json`: Example receipt from Target.
 + `mm_example.json`: Example receipt from M&M Corner Market.
 
-You can use these files to test the application or create your own JSON files following the schema.
+You can use these files to test the application or create your own JSON files following the schema. Or, if you'd prefer, you can pass your own JSON object directly into the command.
 
 ## API Documentation
 
@@ -124,5 +124,5 @@ You can use these files to test the application or create your own JSON files fo
 
 ## Limitations
 
-+ Data is stored in memory and will not persist across application restarts.
++ Data is stored in memory temporarily and will not persist across application restarts.
 + The application requires a valid JSON payload for processing receipts.
