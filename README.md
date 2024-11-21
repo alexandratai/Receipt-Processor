@@ -12,7 +12,7 @@ A simple receipt processor application that allows users to process receipts and
 
 ## How to Set Up the Application
 
-1. Download the `.zip` file and unzip it or run `git clone https://github.com/alexandratai/Receipt-Processor.git` in your terminal. Once downloaded navigate (`cd`) into the project.
+1. Download the `.zip` file and unzip it or run `git clone https://github.com/alexandratai/Receipt-Processor.git` in your terminal. Once downloaded, navigate (`cd`) into the project.
 2. Build the Docker image: 
     ```bash
    docker build -t receipt-processor .
