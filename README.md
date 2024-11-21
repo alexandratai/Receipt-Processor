@@ -1,4 +1,11 @@
-# Receipt-Processor
+# Receipt Processor
+A simple receipt processor
+
+## Features
+
++ Submits a receipt for processing
++ Returns the points awarded for the receipt
+
 ## How to Set Up the Application
 
 1. Download the `.zip` file and unzip it or run `git clone https://github.com/alexandratai/Receipt-Processor.git` in your terminal. Once downloaded `cd` into the project.
