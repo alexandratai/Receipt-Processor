@@ -58,6 +58,12 @@ A simple receipt processor application that allows users to process receipts and
     curl http://localhost:3000/receipts/{id}/points
     ```  
 
+    For clarity's sake - using the previous example, you would be inputting:
+
+    ```bash
+    curl http://localhost:3000/receipts/123e4567-e89b-12d3-a456-426614174000/points
+    ```
+
      **Response example**:
 
     ```bash
